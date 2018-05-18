@@ -1,0 +1,10 @@
+sqs-dashboard:
+  image: sqs-dashboard:latest
+  ports:
+   - "8081:8080"
+  links:
+   - fake-sqs:fake-sqs
+fake-sqs:
+  image: feathj/fake-sqs
+  ports:
+    - "9494:9494"
